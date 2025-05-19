@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="thhp://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-$END$
+<p th:text="'Hello, ' + ${name} + '!'" />
+<p>
+What's up! This page illustrates a few things I like the most.
+    First you have a pic of the Ferrari SF90.
+    Secondly, you have a pic the Martian.
+    Both are very symbolic to me and very interesting as well.
+</p>
+<img th:src="@{/images/sf90.jpeg}" width="600" height="400"/>
+<img th:src="@{/images/martian.jpeg}" width="600" height="400"/>
 </body>
 </html>
